@@ -66,25 +66,41 @@
       id="about"
       class="container mx-auto p-8 my-8 bg-white rounded-lg shadow-md"
     >
-      <h2 class="text-4xl font-extrabold text-center mb-6 text-gray-800">
-        About Me
-      </h2>
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <div class="md:w-1/3 flex justify-center flex-shrink-0">
-          <!-- Placeholder for your profile picture. Replace this src with your actual image URL. -->
+      <div class="flex flex-col md:flex-row md:items-center items-center gap-8">
+        <!-- On mobile, text above the picture -->
+        <div
+          class="md:w-1/3 flex flex-col items-center justify-center flex-shrink-0"
+        >
+          <!-- Show heading only on mobile -->
+          <h2
+            class="text-4xl font-extrabold mb-4 text-gray-800 md:hidden text-center w-full"
+          >
+            About Me
+          </h2>
+
           <img
             src="./Piseth.jpg"
             alt="Piseth Chea Profile Photo"
-            class="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-blue-500"
+            class="w-48 h-48 rounded-full object-contain shadow-lg border-4 border-blue-500"
           />
         </div>
+
+        <!-- Text Content -->
         <div class="md:w-2/3 text-lg leading-relaxed text-gray-700">
+          <!-- Show heading only on md+ -->
+          <h2
+            class="hidden md:block text-4xl font-extrabold mb-4 text-gray-800"
+          >
+            About Me
+          </h2>
+
           <p class="mb-4">
             Hello! I'm
             <span class="font-semibold text-blue-600">Piseth Chea</span>, an
             engineering student at the Institute of Technology of Cambodia,
             majoring in Data Science.
           </p>
+
           <p class="mb-4">
             I'm passionate about
             <strong>researching new things everyday</strong> and enjoy applying
@@ -94,6 +110,7 @@
             data-related applications. I'm also proficient in data visualization
             tools like <strong>Tableau, Power BI, and Looker</strong>.
           </p>
+
           <p>
             Beyond data, I also have skills in
             <strong>entrepreneurship and communication</strong>, which help me
@@ -118,38 +135,29 @@
           class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200"
         >
           <h3 class="text-2xl font-bold text-gray-800 mb-3">
-            Project Title One
+            Bank OOP Project
           </h3>
           <p class="text-gray-700 mb-4">
-            A brief description of your project. Explain what it does, what
-            technologies you used, and any challenges you overcame. Keep it
-            concise but informative.
+            A Python OOP banking system with multiple account types, supporting
+            deposits, withdrawals, and transfers. It includes exception handling
+            to prevent overdrafts and models basic financial logic.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span
-              class="bg-blue-200 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >HTML</span
-            >
-            <span
-              class="bg-green-200 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >CSS</span
-            >
-            <span
-              class="bg-yellow-200 text-yellow-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >JavaScript</span
+              class="bg-indigo-200 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
+              >Python</span
             >
           </div>
+
           <div class="flex justify-between items-center">
             <a
-              href="https://github.com/PISETH-CHEA"
+              href="https://github.com/PISETH-CHEA/Bank-OOP-Project"
               target="_blank"
               class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
             >
               <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
                 <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.498.09.682-.217.682-.483 0-.237-.007-.866-.012-1.703-2.758.592-3.344-1.166-3.344-1.166-.44-.933-1.07-1.188-1.07-1.188-.879-.593.07-.582.07-.582.969.069 1.485.934 1.485.934.855 1.484 2.235 1.055 2.785.808.087-.627.333-1.055.607-1.298-2.11-.229-4.334-1.05-4.334-4.681 0-1.03.367-1.872 1.023-2.513-.103-.228-.44-.1.03-.98 0 0 .837-.253 2.747.969A9.97 9.97 0 0112 5.09c.85.004 1.701.122 2.493.364 1.909-1.222 2.747-.969 2.747-.969.471.88.134.752.031.98.654.641 1.023 1.483 1.023 2.513 0 3.638-2.228 4.444-4.345 4.673.359.309.678.914.678 1.846 0 1.334-.012 2.41-.012 2.72 0 .263.18.572.688.484C21.137 20.281 24 16.514 24 12.017 24 6.484 19.522 2 14 2h-2z"
-                  clip-rule="evenodd"
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.355-1.326-1.714-1.326-1.714-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.464-2.381 1.236-3.221-.124-.3-1.31-3.04.094-3.179 0 0 1.009-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23 1.404.14 0.124 2.879.094 3.179.771.84 1.236 1.911 1.236 3.221 0 4.61-2.805 5.624-5.474 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.195.694.8 1.571 4.881-1.59 8.358-6.08 8.358-11.387 0-6.627-5.373-12-12-12z"
                 ></path>
               </svg>
               GitHub Repo
@@ -172,37 +180,30 @@
           class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200"
         >
           <h3 class="text-2xl font-bold text-gray-800 mb-3">
-            Project Title Two
+            Breast Cancer Classification
           </h3>
           <p class="text-gray-700 mb-4">
-            Another project description. Highlight different aspects here, maybe
-            a problem it solves or a unique feature.
+            This project is a breast cancer classification model using
+            <strong>scikit-learn</strong> to train a neural network that
+            predicts if a tumor is <strong>malignant</strong> or
+            <strong>benign</strong> The model also includes a predictive system
+            for new data.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span
-              class="bg-purple-200 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >React</span
-            >
-            <span
-              class="bg-red-200 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >Node.js</span
-            >
-            <span
-              class="bg-blue-200 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >MongoDB</span
+              class="bg-indigo-200 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
+              >Python</span
             >
           </div>
           <div class="flex justify-between items-center">
             <a
-              href="https://github.com/PISETH-CHEA"
+              href="https://github.com/PISETH-CHEA/ML-Breast-Cancer/tree/main"
               target="_blank"
               class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
             >
               <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
                 <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.498.09.682-.217.682-.483 0-.237-.007-.866-.012-1.703-2.758.592-3.344-1.166-3.344-1.166-.44-.933-1.07-1.188-1.07-1.188-.879-.593.07-.582.07-.582.969.069 1.485.934 1.485.934.855 1.484 2.235 1.055 2.785.808.087-.627.333-1.055.607-1.298-2.11-.229-4.334-1.05-4.334-4.681 0-1.03.367-1.872 1.023-2.513-.103-.228-.44-.1.03-.98 0 0 .837-.253 2.747.969A9.97 9.97 0 0112 5.09c.85.004 1.701.122 2.493.364 1.909-1.222 2.747-.969 2.747-.969.471.88.134.752.031.98.654.641 1.023 1.483 1.023 2.513 0 3.638-2.228 4.444-4.345 4.673.359.309.678.914.678 1.846 0 1.334-.012 2.41-.012 2.72 0 .263.18.572.688.484C21.137 20.281 24 16.514 24 12.017 24 6.484 19.522 2 14 2h-2z"
-                  clip-rule="evenodd"
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.355-1.326-1.714-1.326-1.714-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.464-2.381 1.236-3.221-.124-.3-1.31-3.04.094-3.179 0 0 1.009-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23 1.404.14 0.124 2.879.094 3.179.771.84 1.236 1.911 1.236 3.221 0 4.61-2.805 5.624-5.474 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.195.694.8 1.571 4.881-1.59 8.358-6.08 8.358-11.387 0-6.627-5.373-12-12-12z"
                 ></path>
               </svg>
               GitHub Repo
@@ -226,33 +227,29 @@
           class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200"
         >
           <h3 class="text-2xl font-bold text-gray-800 mb-3">
-            Project Title Three
+            EV Data Analysis
           </h3>
           <p class="text-gray-700 mb-4">
-            Description for your third project, maybe a smaller one or a
-            contribution to an open-source project.
+            This project is a <strong>Tableau</strong> dashboard for
+            <strong>Electric Vehicle Data Analysis</strong>, providing key
+            insights into the EV market's trends, vehicle types, and
+            manufacturer performance.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span
-              class="bg-indigo-200 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >Python</span
-            >
-            <span
               class="bg-teal-200 text-teal-800 text-sm font-medium px-2.5 py-0.5 rounded-full"
-              >Data Analysis</span
+              >Tableau</span
             >
           </div>
           <div class="flex justify-between items-center">
             <a
-              href="https://github.com/PISETH-CHEA"
+              href="https://github.com/PISETH-CHEA/EV-Data-Analysis"
               target="_blank"
               class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
             >
               <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
                 <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.498.09.682-.217.682-.483 0-.237-.007-.866-.012-1.703-2.758.592-3.344-1.166-3.344-1.166-.44-.933-1.07-1.188-1.07-1.188-.879-.593.07-.582.07-.582.969.069 1.485.934 1.485.934.855 1.484 2.235 1.055 2.785.808.087-.627.333-1.055.607-1.298-2.11-.229-4.334-1.05-4.334-4.681 0-1.03.367-1.872 1.023-2.513-.103-.228-.44-.1.03-.98 0 0 .837-.253 2.747.969A9.97 9.97 0 0112 5.09c.85.004 1.701.122 2.493.364 1.909-1.222 2.747-.969 2.747-.969.471.88.134.752.031.98.654.641 1.023 1.483 1.023 2.513 0 3.638-2.228 4.444-4.345 4.673.359.309.678.914.678 1.846 0 1.334-.012 2.41-.012 2.72 0 .263.18.572.688.484C21.137 20.281 24 16.514 24 12.017 24 6.484 19.522 2 14 2h-2z"
-                  clip-rule="evenodd"
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.355-1.326-1.714-1.326-1.714-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.464-2.381 1.236-3.221-.124-.3-1.31-3.04.094-3.179 0 0 1.009-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23 1.404.14 0.124 2.879.094 3.179.771.84 1.236 1.911 1.236 3.221 0 4.61-2.805 5.624-5.474 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.195.694.8 1.571 4.881-1.59 8.358-6.08 8.358-11.387 0-6.627-5.373-12-12-12z"
                 ></path>
               </svg>
               GitHub Repo
@@ -373,9 +370,7 @@
           >
             <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path
-                fill-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.498.09.682-.217.682-.483 0-.237-.007-.866-.012-1.703-2.758.592-3.344-1.166-3.344-1.166-.44-.933-1.07-1.188-1.07-1.188-.879-.593.07-.582.07-.582.969.069 1.485.934 1.485.934.855 1.484 2.235 1.055 2.785.808.087-.627.333-1.055.607-1.298-2.11-.229-4.334-1.05-4.334-4.681 0-1.03.367-1.872 1.023-2.513-.103-.228-.44-.1.03-.98 0 0 .837-.253 2.747.969A9.97 9.97 0 0112 5.09c.85.004 1.701.122 2.493.364 1.909-1.222 2.747-.969 2.747-.969.471.88.134.752.031.98.654.641 1.023 1.483 1.023 2.513 0 3.638-2.228 4.444-4.345 4.673.359.309.678.914.678 1.846 0 1.334-.012 2.41-.012 2.72 0 .263.18.572.688.484C21.137 20.281 24 16.514 24 12.017 24 6.484 19.522 2 14 2h-2z"
-                clip-rule="evenodd"
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.355-1.326-1.714-1.326-1.714-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.464-2.381 1.236-3.221-.124-.3-1.31-3.04.094-3.179 0 0 1.009-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23 1.404.14 0.124 2.879.094 3.179.771.84 1.236 1.911 1.236 3.221 0 4.61-2.805 5.624-5.474 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.195.694.8 1.571 4.881-1.59 8.358-6.08 8.358-11.387 0-6.627-5.373-12-12-12z"
               ></path>
             </svg>
             GitHub Profile
